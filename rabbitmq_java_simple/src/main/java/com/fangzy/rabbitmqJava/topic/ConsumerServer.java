@@ -1,4 +1,4 @@
-package com.fangzy.rabbitmqJava.direct;
+package com.fangzy.rabbitmqJava.topic;
 
 import com.rabbitmq.client.*;
 
@@ -13,20 +13,16 @@ public class ConsumerServer {
         connectionFactory.setUsername("guest");
         connectionFactory.setPassword("guest");
         connectionFactory.setVirtualHost("/");
-        //是否自动重连
-        connectionFactory.setAutomaticRecoveryEnabled(true);
-        //每隔多久重连一次
-        connectionFactory.setNetworkRecoveryInterval(3000);
 
         Connection connection = connectionFactory.newConnection();
         Channel channel = connection.createChannel();
 
-        String QUEUE_NAME = "test-queue";
-        String EXCHANGE_NAME = "test-change";
-        String EXCHANGE_TYPE = "direct";
-        String BINDING_KEY = "add";
-        //声明一个交换机  durable：是否持久化
-        channel.exchangeDeclare(EXCHANGE_NAME,EXCHANGE_TYPE,true,false,false,null);
+        String QUEUE_NAME = "test-queue-topic";
+        String EXCHANGE_NAME = "test-change-topic";
+        String EXCHANGE_TYPE = "topic";
+        String BINDING_KEY = "add.#";
+        //声明一个交换机
+        channel.exchangeDeclare(EXCHANGE_NAME,EXCHANGE_TYPE);
         //声明一个队列
         channel.queueDeclare(QUEUE_NAME, false, false, false, null);
         //队列和交换机进行绑定
@@ -41,7 +37,7 @@ public class ConsumerServer {
                 System.out.println("新消息： '" + message + "'");
             }
         };
-        // 参数：队列名称，是否自动ACK，Consumer
+        //消费消息，自动回复队列应答 -- RabbitMQ中的消息确认机制
         channel.basicConsume(QUEUE_NAME, true, consumer);
 
 //        channel.close();
