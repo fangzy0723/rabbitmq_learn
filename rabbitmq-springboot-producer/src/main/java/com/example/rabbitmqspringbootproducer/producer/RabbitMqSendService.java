@@ -28,7 +28,7 @@ public class RabbitMqSendService {
     private RabbitTemplate rabbitTemplate;
 
     /**
-     * 消息成功的回调
+     * 消息发送成功的回调
      */
     final RabbitTemplate.ConfirmCallback confirmCallback = new RabbitTemplate.ConfirmCallback() {
 
@@ -75,7 +75,7 @@ public class RabbitMqSendService {
         rabbitTemplate.setReturnCallback(returnCallback);
         CorrelationData correlationData = new CorrelationData();
         correlationData.setId(UUID.randomUUID().toString());//消息id全局唯一,ack保证消息唯一使用的这个值
-        rabbitTemplate.convertAndSend("exchange-rabbitmq-springboot","rabbitmq.springboot",msg,correlationData);
+        rabbitTemplate.convertAndSend("exchange-rabbitmq-springboot","rabbitmq1.springboot",msg,correlationData);
 
 
     }

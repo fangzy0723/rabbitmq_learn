@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/rabbitmq-springamqp-test/rabbitmq-springamqp-test.iml" filepath="$PROJECT_DIR$/rabbitmq-springamqp-test/rabbitmq-springamqp-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/rabbitmq-springboot-consumer/rabbitmq-springboot-consumer.iml" filepath="$PROJECT_DIR$/rabbitmq-springboot-consumer/rabbitmq-springboot-consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/rabbitmq-springboot-producer/rabbitmq-springboot-producer.iml" filepath="$PROJECT_DIR$/rabbitmq-springboot-producer/rabbitmq-springboot-producer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rabbitmq-springcloudstream-producer/rabbitmq-springcloudstream-producer.iml" filepath="$PROJECT_DIR$/rabbitmq-springcloudstream-producer/rabbitmq-springcloudstream-producer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rabbitmq-springcloudstrean-consumer/rabbitmq-springcloudstrean-consumer.iml" filepath="$PROJECT_DIR$/rabbitmq-springcloudstrean-consumer/rabbitmq-springcloudstrean-consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/rabbitmq_java_simple/rabbitmq_java_simple.iml" filepath="$PROJECT_DIR$/rabbitmq_java_simple/rabbitmq_java_simple.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/rabbitmq_learn.iml" filepath="$PROJECT_DIR$/.idea/rabbitmq_learn.iml" />
     </modules>
