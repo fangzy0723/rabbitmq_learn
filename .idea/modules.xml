@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/rabbitmq-springamqp-test/rabbitmq-springamqp-test.iml" filepath="$PROJECT_DIR$/rabbitmq-springamqp-test/rabbitmq-springamqp-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/rabbitmq_java_simple/rabbitmq_java_simple.iml" filepath="$PROJECT_DIR$/rabbitmq_java_simple/rabbitmq_java_simple.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/rabbitmq_learn.iml" filepath="$PROJECT_DIR$/.idea/rabbitmq_learn.iml" />
     </modules>
