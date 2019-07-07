@@ -6,13 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="rabbitmq-springboot-consumer" />
         <module name="rabbitmq_learn" />
         <module name="rabbitmq-springamqp-test" />
         <module name="rabbitmq_java_simple" />
+        <module name="rabbitmq-springboot-producer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="rabbitmq-springamqp-test" target="1.8" />
+      <module name="rabbitmq-springboot-consumer" target="1.8" />
+      <module name="rabbitmq-springboot-producer" target="1.8" />
       <module name="rabbitmq_java_simple" target="1.8" />
       <module name="rabbitmq_learn" target="1.8" />
     </bytecodeTargetLevel>
@@ -20,6 +24,8 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="rabbitmq-springamqp-test" options="-parameters" />
+      <module name="rabbitmq-springboot-consumer" options="-parameters" />
+      <module name="rabbitmq-springboot-producer" options="-parameters" />
       <module name="rabbitmq_java_simple" options="-parameters" />
     </option>
   </component>
